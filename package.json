@@ -1,63 +1,18 @@
 {
-  "name": "cube-front-v2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
-  "dependencies": {
-    "@angular/animations": "^13.1.2",
-    "@angular/common": "^13.1.2",
-    "@angular/forms": "^13.1.2",
-    "@angular/platform-browser": "^13.1.2",
-    "@angular/router": "^13.1.2",
-    "@babel/core": "^7.13.8",
-    "@babel/preset-env": "^7.13.8",
-    "add-asset-html-webpack-plugin": "^3.2.0",
-    "angular": "^1.8.2",
-    "angular-animate": "^1.8.2",
-    "angular-cli": "^1.0.0-beta.28.3",
-    "angular-file-upload": "^2.6.1",
-    "angular-moment": "^1.3.0",
-    "angular-ui-router": "^0.4.2",
-    "art-template": "^4.13.2",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.1.0",
-    "element-angular": "^0.7.6",
-    "es6-promise": "^4.2.8",
-    "eslint": "^7.21.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "fast-sass-loader": "^2.0.0",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.2.0",
-    "html-withimg-loader": "^0.1.16",
-    "mini-css-extract-plugin": "^1.3.9",
-    "moment": "^2.29.1",
-    "ng-file-upload": "^12.2.13",
-    "oclazyload": "^1.1.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss-loader": "^5.0.0",
-    "postcss-preset-env": "^6.7.0",
-    "rxjs": "^7.5.2",
-    "sass": "^1.32.8",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.24.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "devDependencies": {},
+  "name": "cube",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Liusiyuan-git/Cube-front-V2.git"
+  "dependencies": {
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Liusiyuan-git/Cube-front-V2/issues"
-  },
-  "homepage": "https://github.com/Liusiyuan-git/Cube-front-V2#readme"
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "vite": "^2.7.2"
+  }
 }
