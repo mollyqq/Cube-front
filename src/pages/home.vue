@@ -1,8 +1,8 @@
 <template>
   <h1>这是首页</h1>
-  <TodoList />
+  <ShowList />
 </template>
 
 <script setup>
-import TodoList from '../components/TodoList.vue'
+import ShowList from './Show.vue'
 </script>
