@@ -1,9 +1,18 @@
+import {ref} from "vue";
 
 export function useTodos(ref, computed) {
     let title = ref("");
     let todos = ref([{title: "学习Vue", done: false}]);
+    let showModal = ref(false)
 
     function addTodo() {
+        if (!title.value) {
+            showModal.value = true
+            setTimeout(() => {
+                showModal.value = false
+            }, 1500)
+            return
+        }
         todos.value.push({
             title: title.value,
             done: false,
@@ -29,5 +38,10 @@ export function useTodos(ref, computed) {
             });
         },
     });
-    return {title, todos, addTodo, clear, active, all, allDone};
+
+    function removeTodo(e, i) {
+        todos.value.splice(i, 1)
+    }
+
+    return {title, todos, addTodo, clear, active, all, allDone, showModal, removeTodo};
 }
