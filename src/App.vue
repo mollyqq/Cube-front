@@ -1,23 +1,25 @@
 <template>
   <el-container>
-    <el-header>
-      <el-menu class="el-menu-cube" mode="horizontal" router="true" default-active="home">
-        <el-image class="el-cube-logo"
-                  :src="getImageUrl()"
-                  :fit="fit"
-        ></el-image>
-        <el-menu-item index="home">首页</el-menu-item>
-        <el-menu-item index="community">江湖</el-menu-item>
-        <el-menu-item index="blog">我要发表</el-menu-item>
-        <el-menu-item index="message">消息动态</el-menu-item>
-        <el-menu-item index="search">站内搜索</el-menu-item>
-        <el-menu-item index="about">关于cube</el-menu-item>
-      </el-menu>
-    </el-header>
-    <el-main>
-            <router-view></router-view>
-    </el-main>
-    <el-footer>Footer</el-footer>
+    <el-scrollbar class="main-scrollbar">
+      <el-header class="main-header">
+        <el-menu class="main-menu" mode="horizontal" router="true" default-active="home">
+          <el-image class="main-cube-logo"
+                    :src="getImageUrl()"
+                    :fit="fit"
+          ></el-image>
+          <el-menu-item index="home">首页</el-menu-item>
+          <el-menu-item index="community">江湖</el-menu-item>
+          <el-menu-item index="blog">我要发表</el-menu-item>
+          <el-menu-item index="message">消息动态</el-menu-item>
+          <el-menu-item index="search">站内搜索</el-menu-item>
+          <el-menu-item index="about">关于cube</el-menu-item>
+        </el-menu>
+      </el-header>
+      <el-main class="main-area">
+        <router-view></router-view>
+      </el-main>
+      <el-footer class="main-footer">Footer</el-footer>
+    </el-scrollbar>
   </el-container>
 </template>
 
@@ -32,34 +34,40 @@ const fit = ref("contain")
 <style lang="scss">
 body {
   margin: unset;
+  overflow: hidden;
 }
 
-.el-container {
+.main-scrollbar {
   position: absolute;
   top: 0;
   bottom: -60px;
   left: 0;
   right: 0;
 
-  .el-header {
+  .el-scrollbar__view{
+    height: 100%;
+  }
+
+  .main-header {
     padding: unset;
 
-    .el-menu-cube {
+    .main-menu {
       display: flex;
       padding: 0 calc(50% - 570px);
 
-      .el-cube-logo {
+      .main-cube-logo {
         width: 100px;
         margin-right: 50px;
       }
     }
   }
 
-  .el-main {
+  .main-area {
     height: calc(100% - 60px);
+    padding: unset;
   }
 
-  .el-footer {
+  .main-footer {
     background: #f6f9fa;
     display: flex;
     justify-content: center;
