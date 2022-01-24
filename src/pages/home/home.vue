@@ -1,58 +1,60 @@
 <template>
   <el-container class="home-container">
     <el-aside width="200px">
-      <el-row class="tac home-menu-row">
-        <el-col :span="24">
-          <el-menu
-              default-active="2"
-              class="el-menu-vertical-demo home-menu"
-          >
-            <el-menu-item index="0">
-              <el-icon>
-                <house/>
-              </el-icon>
-              <span>全部</span>
-            </el-menu-item>
-            <el-sub-menu :index="index+1+''" v-for="(item,index) in menuList">
-              <template #title>
-                <el-icon v-show="item.icon === 'reading'">
-                  <reading/>
+      <el-scrollbar>
+        <el-row class="tac home-menu-row">
+          <el-col :span="24">
+            <el-menu
+                default-active="2"
+                class="el-menu-vertical-demo home-menu"
+            >
+              <el-menu-item index="0">
+                <el-icon>
+                  <house/>
                 </el-icon>
-                <el-icon v-show="item.icon === 'connection'">
-                  <connection/>
-                </el-icon>
-                <el-icon v-show="item.icon === 'cloud'">
-                  <mostly-cloudy/>
-                </el-icon>
-                <el-icon v-show="item.icon === 'coin'">
-                  <coin/>
-                </el-icon>
-                <el-icon v-show="item.icon === 'cpu'">
-                  <cpu/>
-                </el-icon>
-                <el-icon v-show="item.icon === 'more'">
-                  <more/>
-                </el-icon>
-                <span>{{ item.name }}</span>
-              </template>
-              <el-menu-item :index="index+1+''+_index" v-for="(_item,_index) in item.child">{{ _item.name }}
+                <span>全部</span>
               </el-menu-item>
-            </el-sub-menu>
-            <!--            <el-menu-item index="3" disabled>-->
-            <!--              <el-icon>-->
-            <!--                <document/>-->
-            <!--              </el-icon>-->
-            <!--              <span>Navigator Three</span>-->
-            <!--            </el-menu-item>-->
-            <!--            <el-menu-item index="4">-->
-            <!--                          <el-icon>-->
-            <!--                            <setting/>-->
-            <!--                          </el-icon>-->
-            <!--                          <span>Navigator Four</span>-->
-            <!--            </el-menu-item>-->
-          </el-menu>
-        </el-col>
-      </el-row>
+              <el-sub-menu :index="index+1+''" v-for="(item,index) in menuList">
+                <template #title>
+                  <el-icon v-show="item.icon === 'reading'">
+                    <reading/>
+                  </el-icon>
+                  <el-icon v-show="item.icon === 'connection'">
+                    <connection/>
+                  </el-icon>
+                  <el-icon v-show="item.icon === 'cloud'">
+                    <mostly-cloudy/>
+                  </el-icon>
+                  <el-icon v-show="item.icon === 'coin'">
+                    <coin/>
+                  </el-icon>
+                  <el-icon v-show="item.icon === 'cpu'">
+                    <cpu/>
+                  </el-icon>
+                  <el-icon v-show="item.icon === 'more'">
+                    <more/>
+                  </el-icon>
+                  <span>{{ item.name }}</span>
+                </template>
+                <el-menu-item :index="index+1+''+_index" v-for="(_item,_index) in item.child">{{ _item.name }}
+                </el-menu-item>
+              </el-sub-menu>
+              <!--            <el-menu-item index="3" disabled>-->
+              <!--              <el-icon>-->
+              <!--                <document/>-->
+              <!--              </el-icon>-->
+              <!--              <span>Navigator Three</span>-->
+              <!--            </el-menu-item>-->
+              <!--            <el-menu-item index="4">-->
+              <!--                          <el-icon>-->
+              <!--                            <setting/>-->
+              <!--                          </el-icon>-->
+              <!--                          <span>Navigator Four</span>-->
+              <!--            </el-menu-item>-->
+            </el-menu>
+          </el-col>
+        </el-row>
+      </el-scrollbar>
     </el-aside>
     <el-main>Main</el-main>
   </el-container>
